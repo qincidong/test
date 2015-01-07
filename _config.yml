@@ -1,0 +1,29 @@
+# Site settings
+title: luckystar's blog
+email: qincidong@qq.com
+permalink: /:title
+paginate: 6
+pygments: true
+paginate_path: /page:num
+description: > # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "qincidong.github.io" # the base hostname & protocol for your site
+twitter_username: jekyllrb
+github_username:  qincidong
+
+# Build settings
+markdown: rdiscount
+highlight: light
+
+# author
+author_name: luckystar
+author_email: qincidong@qq.com
+author_info: <a href="http://qincidong.github.io">luckystar</a>
+
+# site
+title: luckystar's blog
+url: http://qincidong.github.io
+feed: /atom.xml
