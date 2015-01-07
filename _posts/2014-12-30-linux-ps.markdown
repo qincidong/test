@@ -1,0 +1,34 @@
+---
+layout: post
+title:  Linux下查看和结束进程
+description: Linux下查看和结束进程，查看日志命令的使用。这些是日常使用的命令。
+date:   2014-12-30 10:12
+categories: blog
+tags: linux ps
+---
+- 查看tomcat进程ＩＤ：
+{% highlight xml %}
+ps -ef | grep tomcat
+{% endhighlight %}
+
+- 查看java进程ＩＤ：
+{% highlight xml %}
+ps -ef | grep java
+{% endhighlight %}
+
+
+- 结束进程：
+{% highlight xml %}
+kill pid
+{% endhighlight %}
+
+- 查看日志
+{% highlight xml %}
+tail -f filename
+{% endhighlight %}
+
+参考：
+[Linux tail 命令详解][1]
+[unix 中 ps -ef命令详解][2]
+[1]:http://www.2cto.com/os/201111/110143.html
+[2]:http://blog.sina.com.cn/s/blog_4af3b94f0101lhpu.html

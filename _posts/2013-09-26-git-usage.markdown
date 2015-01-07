@@ -1,0 +1,45 @@
+---
+layout: post
+title:  git使用之如何将github库下载到本地与如何将代码上传github
+description: git使用之如何将github库下载到本地与如何将代码上传github
+date:   2013-09-26 16:49:39
+categories: blog
+tags: git
+---
+一、如何将github库下载到本地
+{% highlight java %}
+env GIT_SSL_NO_VERIFY=true git clone https://github.com/super-d2/seajs.git seajs
+{% endhighlight java %}
+
+![img](http://images.cnitblog.com/blog/302729/201309/26131400-b050dab78aa249eba495ca8a44815dcc.jpg)
+这样子代码就下载到本地了。  
+我们打开查看下：
+![img](http://images.cnitblog.com/blog/302729/201309/26131517-d14f95b6e733493f8e6574e7c3322d5c.jpg)
+实际上，还有一个隐藏的文件：
+![img](http://images.cnitblog.com/blog/302729/201309/26131644-501cd8efc7094cc0b376891f67e2b74e.jpg)
+返回到上一级  
+这部分先介绍到这儿；  
+一般我们希望从远程下自己或者别人库中的代码，然后修改上传到远程库中：  
+操作如下： 
+![img](http://images.cnitblog.com/blog/302729/201309/26132159-eaa62d99973147d5970a5db01182342f.jpg)
+我们执行了
+{% highlight java %}
+git add zcw.txt
+git commit -m "zzz"
+{% endhighlight %}
+
+实际上仅仅只是在我们的本地库中做修改  
+本地的工作流其实包含三棵树，偷个图片：
+![img](http://images.cnitblog.com/blog/302729/201309/26132447-31edf194e3664d768c89b7cff220494c.jpg)
+所以，到现在，现在，我的改动已经提交到了 HEAD，但是还没到我的远端仓库  
+现在我们来把代码上传到远程库； 
+操作如下：
+![img](http://images.cnitblog.com/blog/302729/201309/26133135-23077ee004634c23bd6a4fd9bf76e940.jpg)
+操作的过程中会叫我们输入我们在github中的账号和密码，如图：
+![img](http://images.cnitblog.com/blog/302729/201309/26133259-6f54b048c2b34b27a1b3328240f527c8.jpg)
+![img](http://images.cnitblog.com/blog/302729/201309/26133310-01dc34bf1a1b40b88f9a070740f60833.jpg)
+现在我们去git上查看下：
+![img](http://images.cnitblog.com/blog/302729/201309/26133440-ae4be3bf8d5d4bb5bb60718284a86338.jpg)
+看！已经成功把代码上传远程库了。那个注释"zzz2"是我之后修改的。大家尝试下吧。
+
+文章转载：[super-d2](http://www.cnblogs.com/super-d2/p/3340639.html)
